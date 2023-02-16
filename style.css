@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body {
+    background-image: linear-gradient(to bottom right, rgb(255, 248, 219), rgb(50, 158, 177));
+}
+.title, .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(36, 36, 36);
+}
+.selections {
+    background-color: rgb(117, 115, 115);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+}
+.sel span {
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+.sel {
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(145, 145, 145);
+    gap: 2rem;
+    border-radius: 1rem;
+    user-select: none;
+}
+.footer h2:hover {
+    color:orange;
+}
+h1, h3 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+h2 { color: aqua;}
+h1 { font-size: 3rem;}
+h2 { font-size: 2rem;}
+h3 { font-size: 1.5rem;}
+.app {
+    margin: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator {
+    background-color: rgb(37, 37, 37);
+    width:100%;
+    max-width: 400px;
+    min-height: 620px;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.display {
+    min-height: 180px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    text-align: right;
+    flex: 1 1 0%;
+}
+.display .input {
+    color: rgba(255, 255, 255, 0.801);
+    font-size: 3rem;
+    margin-bottom: 0.5rem; 
+}
+.display .input span {
+    color: rgba(255, 0, 0, 0.801);
+}
+.display .output {
+    font-size: 3.5rem;
+    font-weight: 700;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+.display .brackets, .display .percent {
+    color: lightseagreen;
+}
+.keys {
+    background-color: rgb(66, 66, 66);
+    padding: 2rem;
+    border-radius: 1rem 1rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1rem;
+    box-shadow: inset 0 -4px 10px rgb(19, 19, 19);
+}
+.keysbottom {
+    background-color: rgb(66, 66, 66);
+    padding: 2rem;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+    box-shadow: inset 0 -4px 10px rgb(19, 19, 19);
+}
+.keys .key {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    background-color: rgb(41, 41, 41);
+    border-radius: 1rem;
+    transition: 0.2s;
+    user-select: none; /*dont be able to select text*/
+}
+.keysbottom .keyb {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    background-color: rgb(41, 41, 41);
+    border-radius: 1rem;
+    transition: 0.2s;
+    user-select: none; 
+}
+.keysbottom .keyb span {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+}
+.keys .key span {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+}
+.keys .key:hover {
+    box-shadow: 0 0 5px white;
+}
+.keys .key.operator:hover {
+    box-shadow: 0 0 5px aqua;
+}
+.keys .key.action:hover {
+    box-shadow: 0 0 5px rgb(114, 255, 32);
+}
+.keys .key.operator span{
+    color:aqua;
+}
+.keys .key.action span {
+    color: rgb(114, 255, 32);
+}
